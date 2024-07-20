@@ -14,6 +14,6 @@ window_spec = Window.orderBy(col("count").desc())
 
 df2 = df1.withColumn("rank", rank().over(window_spec))
 
-df3 = df2.where(df2.rank == 3)
+# df3 = df2.where(df2.rank == 3)
 
-df3.show()
+df2.show()
