@@ -6,7 +6,7 @@ from pyspark.sql.window import Window
 
 spark = SparkSession.builder.appName("customerdf").getOrCreate()
 
-df = spark.read.option("header", "true").csv("customers.csv")
+df = spark.read.option("header", "true").csv("/tmp/venu/customers.csv")
 
 df1 = df.groupby("country").count()
 
